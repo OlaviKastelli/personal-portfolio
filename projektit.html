@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayteportfolio Projektit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Play:wght@700&family=Yanone+Kaffeesatz:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="nayteportfolio.css">
+</head>
+
+<body>
+    <a id="alku"></a>
+    <header>
+        <h1>Näyteportfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="etusivu.html">Etusivu</a></li>
+            <li><a href="tyoelama.html">Työelämä</a></li>
+            <li><a href="opinnot.html">Opinnot</a></li>
+            <li><a href="ict.html">ICT</a></li>
+            <li><a href="harrastukset.html">Harrastukset</a></li>
+            <li class="selected"><a href="projektit.html">Projektit</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section class="introduction">
+            <h2>
+                Projektit
+            </h2>
+            <p>
+                Projekteja on ollut pienestä suurempaan ja niitä on suunnittelu ja toteutus asteella lisää.
+                Osiossa on käsitelty joitain niistä, niin koulutuksen kuin vapaa-ajan puoleltaki.
+            </p>
+        </section>
+        <section>
+            <a id="section"></a>
+            <aside class="page">
+                <article class="right">
+                    <p id="projekti">
+                        <br>
+                        Napsautappa vasemmalta tumman sinistä tekstiä niin saat lisää tarinaa.
+                    </p>
+                </article>
+                <br>
+                <div id="pictures">
+                    <img id="image" class="responsive" src='img/projektit.jpg' alt='Nyt ei tullut kuvaa'>
+                </div>
+            </aside>
+            <article class="page">
+                <br>
+                <a href="Javascript: insinoorityo();">Insinöörityö</a>
+                <p>
+                    Insinööri työ on tehty vuonna 2008 Kotkassa.<br>
+                </p>
+                <a href="Javascript: tomaattimokki();">Tomaattimökki</a>
+                <p>
+                    Tomaattimökin olen suunnitellut ja rakentanut Raaheen lapsuuden kotini pihalle<br>
+                </p>
+                <a href="Javascript: dtulostus();">3D tulostus</a>
+                <p>
+                    3D-tulostus oli kiinnostuksen ja koulutuksen kohteena Jyväskylässä<br>
+                </p>
+                <a href="Javascript: dmallinnus();">3D mallinnus</a>
+                <p>
+                    Olen opetellut käyttämään useita 3D-mallinnus ohjelmia.<br>
+                </p>
+            </article>
+            <hr class="clear">
+        </section>
+        <a href="#section">[Tekstin alkuun]</a>
+        <a href="#alku">[Sivun alkuun]</a>
+    </main>
+    <footer>
+        <p><em>&copy; 2021 Olavi Kastelli. Kaikki oikeudet pidätetään.</em></p>
+    </footer>
+    <!-- Tälle sivulle on lisätty Javascript koodiin funktion sisälle kaksi uutta funktiota. Ensimmäinen removeChild() tyhjentää
+    elementin, jottei edellä ladatut kuvat jää sinne roikkumaan. Seuraavassa addImage luodaan kuva elementti ja sille Id, Class ja osoite.
+    Funktio on luotu siten, että sen toteuttaessa tarvitsee lisätä vain ID:ksi numero, sekä kuvan osoite. -->
+    <script>
+        var pictures = document.getElementById("pictures");
+        function removeChild() {
+            while (pictures.firstChild) {
+                pictures.removeChild(pictures.firstChild);
+            }
+        }
+        function addImage(Num, ImgUrl) {
+            let img = document.createElement('img');
+            pictures.appendChild(img);
+            img.setAttribute("id", Num);
+            img.setAttribute("class", "responsive");
+            picture = document.getElementById(Num)
+            picture.src = ImgUrl;
+        }
+        function insinoorityo() {
+            let div = document.getElementById("projekti");
+            div.innerHTML = "Insinöörityö sisältyi Venealan koulutusohjelmaan vuonna 2008. Aiheena oli suunnitella itsenäisesti 7 metrinen HT-vene, joka sisältäisi tilavat asuin ja oleskelutilat, sekä mallintaa se. Työn tein huvivenedirektiivejä noudattaen, joka osottautui työn edetessä sen keskiöksi. Aihe osottautui liian laajaksi. Vene ei mennyt tuotantoon ja työ toimi lähinnä omaa opiskeluani edeltäen. Työhön vertailin opiskelemiani 3D-mallinnus ohjelmia (Rhinoceros, Solidworks, Multisurf, Inventor), joista valitsin Solidworksin. Kyseiset kuvat on tällä ohjelmalla mallintamia.";
+            removeChild()
+            addImage("1", "img/insinoorityo1.jpg")
+            addImage("2", "img/insinoorityo2.jpg")
+            addImage("3", "img/insinoorityo3.jpg")
+        }
+        function tomaattimokki() {
+            let div = document.getElementById("projekti");
+            div.innerHTML = "Oma talo on vielä rakentamatta. Laskettakoon tämä projekti kuitenki mökin rakennukseksi, vaikkei talvi asuttava olekaan. Suunnitteluni otti aikaa kun annoin sepeleiden rauhassa laskeutua muutaman vuoden. Ryhdyttyäni hommaan työn oli oltava tehokasta aikataulun puitteissa ja yhden miehen tehtävissä, joten jos materiaaleja tai työkaluja ei ollut saatavilla käytettiin sitä mitä maalaistalo tarjoaa. Tämä tarkoitti sitä että mökki sai luonnetta ja hienosäätö tehtiin moottorisahalla.";
+            removeChild()
+            addImage("1", "img/tomaattimokki1.jpg")
+            addImage("2", "img/tomaattimokki2.jpg")
+            addImage("3", "img/tomaattimokki3.jpg")
+        }
+        function dtulostus() {
+            let div = document.getElementById("projekti");
+            div.innerHTML = "3D-Tulostus kurssilla päätyökaluna oli Inventor 3D-mallinnus ohjelma. Siitä ulostuotuja mallinnuksia sovellettiin käytännössä henkilökohtaisessa käytössämme olevilla 3D-tulostimilla. Tulostimena toimi kahden kelan (materiaalin) MiniFactory. Omien projektien keskiöön nousi suunnitelemani klipsi. Tämän avulla pystyin monipuolisesti muokkaamaan mallinnuksen ja tulostuksen yhteensopivuutta toimivuuden vaatimalle tasolle. Tämä vaati tulostimen säätöjen ja materiaalien vuorovaikutusta 3D-mallinnukseen, jotta tulostus olisi vakaa ja toimiva. Ohessa myös muita suunnittelemiani tulostuksia, joilla on haettu toiminnallisuutta tai 3D-tulostimen rajoja kuten muodot ja pienuus. Mallit ovat itseni suunnittelemia, mallinnettuja ja tulostettuja.";
+            removeChild()
+            addImage("1", "img/dtulostus1.jpg")
+            addImage("2", "img/dtulostus2.png")
+            addImage("3", "img/dtulostus3.png")
+            addImage("4", "img/dtulostus4.jpg")
+            addImage("5", "img/dtulostus5.png")
+            addImage("6", "img/dtulostus6.jpg")
+            addImage("7", "img/dtulostus7.png")
+            addImage("8", "img/dtulostus8.jpg")
+            addImage("9", "img/dtulostus9.png")
+        }
+        function dmallinnus() {
+            let div = document.getElementById("projekti");
+            div.innerHTML = "Tässä osiossa on eri ohjelmien 3D-mallinnuksia vuosien varrelta. Ohjelmina ovat toimineet Solidworks, Inventor, 3D-Autocad, Rhinoceros, Multisurf ja Blender. Näistä Solidworks ja Inventor ovat olleet teknisemmässä suunnittelussa mukana esim. osien liike ja niihin kohdistuvat voimat. 3D-Autocad on ollut mukana kalustesuunnittelussa. Rhinoceros kappaleitten muotoilussa. Multisurf veneensuunnittelussa, koska siitä saatiin jatkettua mallinnuksia muihin aero- ja hydrodynaamisuutta testaaviin ohjelmiin. Nykyisin olen käyttänyt Blender mallinnus ohjelmaan, josta olen vienyt malleja Unity pelimoottoriin.";
+            removeChild()
+            addImage("1", "img/dmallinnus1.jpg")
+            addImage("2", "img/dmallinnus2.jpg")
+            addImage("3", "img/dmallinnus3.jpg")
+            addImage("4", "img/dmallinnus4.jpg")
+            addImage("5", "img/dmallinnus5.PNG")
+            addImage("6", "img/dmallinnus6.png")
+            addImage("7", "img/dmallinnus7.png")
+        }
+    </script>
+</body>
+
+</html>

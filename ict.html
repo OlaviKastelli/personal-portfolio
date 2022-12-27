@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayteportfolio Projektit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Play:wght@700&family=Yanone+Kaffeesatz:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="nayteportfolio.css">
+</head>
+
+<body>
+    <a id="alku"></a>
+    <header>
+        <h1>Näyteportfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="etusivu.html">Etusivu</a></li>
+            <li><a href="tyoelama.html">Työelämä</a></li>
+            <li><a href="opinnot.html">Opinnot</a></li>
+            <li class="selected"><a href="ict.html">ICT</a></li>
+            <li><a href="harrastukset.html">Harrastukset</a></li>
+            <li><a href="projektit.html">Projektit</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="introduction">
+            <h2>
+                ICT
+            </h2>
+            <p>
+                Tässä osiossa on lueteltuja ICT osaamistani. Osaaminen on hankittu Jyväskylän ammattikorkeakoulun (JAMK)
+                kursseilta. Listaan on laitettu suoritettujen kurssien nimet, sekä sulkeisiin niissä käsiteltyjä
+                aiheailueita.
+
+                Lisää tietoa löytyy Github tililtäni. <a class="hyperlink"
+                    href="https://github.com/OlaviKastelli">github.com/OlaviKastelli</a>
+            </p>
+        </section>
+        <section>
+            <a id="section"></a>
+            <aside class="page">
+                <article class="right">
+                    <p id="projekti">
+                        <br>
+                        Napsautappa vasemmalta tumman sinistä tekstiä niin saat lisää tarinaa.
+                    </p>
+                </article>
+                <br>
+                <div id="pictures">
+                    <img id="image" class="responsive" src='img/ictfront.png' alt='Nyt ei tullut kuvaa'>
+                </div>
+            </aside>
+            <article class="page">
+                <br>
+                <a href="Javascript: tietovisa();">Tietovisa-ohjelma</a>
+                <p>
+                    Osana ohjelmistoalan-osaaja koulutusta tehty Python ohjelma.<br>
+                </p>
+                <a href="Javascript: blender();">Blender to Unity</a>
+                <p>
+                    Blender 3D-mallien viemistä Unity pelimoottoriin.<br>
+                </p>
+                <a href="Javascript: buutti();">Buutti</a>
+                <p>
+                    BUUTTI FULL STACK TRAINING REKRYKOULUTUS<br>
+                </p>
+                <p><a class="hyperlink"
+                href="https://buuttiedu.com/tyonhakijalle/buutti-full-stack-training-rekrykoulutus/">https://buuttiedu.com/tyonhakijalle/buutti-full-stack-training-rekrykoulutus/</a>
+                <br>
+                </p>
+                <p>
+                    TTC1040 Linuxin käyttö ja hallinta 5op
+                    (Linux)<br><br>
+                    TTC2030 Ohjelmoinnin perusteet 5op
+                    (Python, harjoitustyö)<br><br>
+                    TTZW0410 Git-versionhallinta ja Gitlab-projektien hallintaympäristö 1op<br><br>
+                    TTC2020 Tietokannat 4op
+                    (MySQLWorkbench, harjoitustyö)<br><br>
+                    TTZC0600 Kyberturvallisuus 4op
+                    (GDPR, Riskienhallinta, Tietoturvaraportti)<br><br>
+                    TTC2010 Web-tekniikat 4op
+                    (HTML ES6, CSS, harjoitustyö)<br><br>
+                    TTC2080 Full Stack-ohjelmointi 5op
+                    (Javascript, Node.js, Express.js, MongoDB)<br><br>
+                    TTC8630 Web-julkaisujärjestelmät 5op
+                    (Wordpress)<br><br>
+                    TTC2060 Skriptaamisen ja automatisoinnin perusteet 3op (menossa) (PowerShell)<br><br>
+                    HTG414W1-3001 Blender Modeling 5op (Menossa) (Blender)
+                    <br>
+                </p>
+            </article>
+            <hr class="clear">
+        </section>
+        <a href="#section">[Tekstin alkuun]</a>
+        <a href="#alku">[Sivun alkuun]</a>
+    </main>
+    <footer>
+        <p><em>&copy; 2021 Olavi Kastelli. Kaikki oikeudet pidätetään.</em></p>
+    </footer>
+    <!-- Tälle sivulle on lisätty Javascript koodiin funktion sisälle kaksi uutta funktiota. Ensimmäinen removeChild() tyhjentää
+    elementin, jottei edellä ladatut kuvat jää sinne roikkumaan. Seuraavassa addImage luodaan kuva elementti ja sille Id, Class ja osoite.
+    Funktio on luotu siten, että sen toteuttaessa tarvitsee lisätä vain ID:ksi numero, sekä kuvan osoite. -->
+    <script>
+        var pictures = document.getElementById("pictures");
+        function removeChild() {
+            while (pictures.firstChild) {
+                pictures.removeChild(pictures.firstChild);
+            }
+        }
+        function addImage(Num, ImgUrl) {
+            let img = document.createElement('img');
+            pictures.appendChild(img);
+            img.setAttribute("id", Num);
+            img.setAttribute("class", "responsive");
+            picture = document.getElementById(Num)
+            picture.src = ImgUrl;
+        }
+        function tietovisa() {
+            let div = document.getElementById("projekti");
+            div.innerHTML = "Tietovisa-ohjelma on tehty Python-ohjelmointikielellä. Sillä pystyy tallentamaan kysymyssarjoja tiedostoon ja lataamaan tiedostosta käyttäjälle ne vastattaviksi. Kuvista olen poistanut kommenttini tilan säästämiseksi. Kokonaisuudessaan työ on tällä hetkellä koulun labranet palvelimella, josta tulen siirtämään sen Github tililleni vapaasti tarkasteltavaksi. Kolme ensimmäistä kuvaa on lähdekoodista ja seuraavat kaksi esimerkkejä ohjelman toiminnasta";
+            removeChild()
+            addImage("1", "img/python1.PNG")
+            addImage("2", "img/python2.PNG")
+            addImage("3", "img/python3.PNG")
+            addImage("4", "img/python4.PNG")
+            addImage("5", "img/python5.PNG")
+        }
+        function blender() {
+            let div = document.getElementById("projekti");
+            div.innerHTML = "Olen ollut työharjoittelijana mukana projektissa, jossa tehdään 3D-mallinnuksia vietäväksi Unity pelimoottoriin. Ensimmäisessä kahdessa kuvassa on Blenderin työvaiheita mallintamastani kerrostalosta. Seuraavissa on toinen mallintamani kerrostalo vietynä Unityyn. Viimeisessä on tekemäni testipeli, jotta hallitsisin Unityn perustekniikat. Sivussa on muokkaamani koodi C# ohjelmointikielellä. Sekä peli, että koodi on tehty Youtube videon opastuksella, jonka julkaisija on nimimerkillä Imphenzia. ";
+            removeChild()
+            addImage("1", "img/blender1.PNG")
+            addImage("2", "img/blender2.PNG")
+            addImage("3", "img/blender3.PNG")
+            addImage("4", "img/blender4.PNG")
+            addImage("5", "img/blender5.PNG")
+        }
+        function buutti() {
+            let div = document.getElementById("projekti");
+            div.innerHTML = "Olen suorittanut Buutin järjestämän fullstack rekrytointikoulutuksen. Osana koulutusta suoritin työharjoittelun YSP oy:llä. Toimenkuvana oli ohjelmistosuunnittelijaharjoittelija, jonka pääasiallisiin tehtäviin kuului: IOT alustan hallintakäyttöliittymän (WUI) kehitystehtävät ReactJS:llä sekä IOT edge komponenttien ajoalustan konfiguroiminen Linux-pohjaiseen reitittimeen (PoC) Lua-scriptikielellä";
+                    removeChild()
+        }
+    </script>
+</body>
+
+</html>

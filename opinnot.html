@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayteportfolio Opinnot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Play:wght@700&family=Yanone+Kaffeesatz:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="nayteportfolio.css">
+</head>
+
+<body>
+    <a id="alku"></a>
+    <header>
+        <h1>Näyteportfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="etusivu.html">Etusivu</a></li>
+            <li><a href="tyoelama.html">Työelämä</a></li>
+            <li class="selected"><a href="opinnot.html">Opinnot</a></li>
+            <li><a href="ict.html">ICT</a></li>
+            <li><a href="harrastukset.html">Harrastukset</a></li>
+            <li><a href="projektit.html">Projektit</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section class="introduction">
+            <h2>
+                Opinnot
+            </h2>
+            <p>
+                Elämähän on ainaista oppimista. Olen tutustunut moniin eri aloihin niin töiden kuin opiskeluiden
+                puolesta.
+                Edellisen vuoden aikana olen opiskellut ICT-alaa keskittyen frontend puoleen.
+            </p>
+        </section>
+        <section>
+            <a id="section"></a>
+            <aside class="page">
+                <article class="right">
+                    <p id="study">
+                        <br>
+                        Napsautappa vasemmalta tumman sinistä tekstiä niin saat lisää tarinaa ja kuvia.
+                    </p>
+                </article>
+                <br>
+                <img id="image" class="responsive" src='img/opiskelu.PNG' alt='Nyt ei tullut kuvaa'>
+            </aside>
+            <article class="page">
+                <br>
+                <a href="Javascript: buutti();">Buutti</a>
+                <p>
+                    BUUTTI FULL STACK TRAINING REKRYKOULUTUS 2022<br>
+                </p>
+                <p><a class="hyperlink"
+                href="https://buuttiedu.com/tyonhakijalle/buutti-full-stack-training-rekrykoulutus/">https://buuttiedu.com/tyonhakijalle/buutti-full-stack-training-rekrykoulutus/</a>
+                </p>
+                <a href="Javascript: ict();">Ohjelmistoalan osaaja</a>
+                <p>
+                    Jyväskylän ammattikorkeakoulu<br>
+                    2021-<br>
+                </p>
+                <a href="Javascript: huoneistosaneeraja();">Huoneisto-saneeraja</a>
+                <p>
+                    Gradia<br>
+                    2019-2020<br>
+                </p>
+                <a href="Javascript: logistiikka();">Logistiikka-alan perusteet</a>
+                <p>
+                    Gradia<br>
+                    2017-2018<br>
+                </p>
+                <a href="Javascript: tulostuskoulutus();">3D-tulostus koulutus</a>
+                <p>
+                    Jyväskylän ammattikorkeakoulu<br>
+                    2016-2017<br>
+                </p>
+                <a href="Javascript: luonto();">Luonto ja ympäristöalan perustutkinto</a>
+                <p>
+                    Saamelaisalueen koulutuskeskus<br>
+                    2013-2015<br>
+                </p>
+                <a href="Javascript: puuveneala();">Puuvenealan artesaanin koulutus</a>
+                <p>
+                    Ikaalisten käsi- ja taideoppilaitos<br>
+                    2010-2012<br>
+                </p>
+                <a href="Javascript: veneala();">Venealan koulutus-ohjelma</a>
+                <p>
+                    Kymenlaakson ammattikorkeakoulu<br>
+                    2003-2008<br>
+                </p>
+                <a href="Javascript: automaatioasentaja();">Automaatio-asentajan perustutkinto</a>
+                <p>
+                    <br>
+                    Useita eri työpaikkoja 2009-2010<br>
+                </p>
+            </article>
+            <hr class="clear">
+        </section>
+        <a href="#section">[Tekstin alkuun]</a>
+        <a href="#alku">[Sivun alkuun]</a>
+    </main>
+    <footer>
+        <p><em>&copy; 2021 Olavi Kastelli. Kaikki oikeudet pidätetään.</em></p>
+    </footer>
+    <!-- Seuraavassa Javascript koodissa on lisätty tyoelama sivun koodiin, myös oikealla puolella nähtävän kuvan vaihto
+    aluealuetta vaihtaessa. Kuva haetaan myös sen Id arvolla ja vaihdetaan sen linkki src toiseksi. -->
+    <script>
+        function buutti() {
+            let div = document.getElementById("study");
+            div.innerHTML = "Olen suorittanut Buutin järjestämän fullstack rekrytointikoulutuksen. Osana koulutusta suoritin työharjoittelun YSP oy:llä. Toimenkuvana oli ohjelmistosuunnittelijaharjoittelija, jonka pääasiallisiin tehtäviin kuului: IOT alustan hallintakäyttöliittymän (WUI) kehitystehtävät ReactJS:llä sekä IOT edge komponenttien ajoalustan konfiguroiminen Linux-pohjaiseen reitittimeen (PoC) Lua-scriptikielellä";
+        }
+        function ict() {
+            let div = document.getElementById("study");
+            div.innerHTML = "Koulutus on sisältänyt seuraavia aihealueita: Linux, Python, Git, Kyberturvallisuus, HTML, Javascipt, Wordpress, Fullstack. Tällä hetkellä olen työharjoittelussa projektissa, jossa teen 3D-mallinnuksia Blenderillä Unityyn. Koulutuksesta enemmän projektit välilehdellä";
+            document.getElementById('image').src = "img/ict.PNG";
+        }
+        function huoneistosaneeraja() {
+            let div = document.getElementById("study");
+            div.innerHTML = "Huoneistosaneeraus koulutuksessa sai kokeilla eri saneeraustekniikoita, kuten vedeneristys, laatoitus, sekä muita pintaremontin osa-aluita, kuten tapetoiminen ja maalaaminen. Koulutuksessa oppi myös teoriaa talotekniikasta, kuten ilmanvaihdosta ja rintamamiestalojen huolto- ja korjaustehtävistä." + "<br><br>" + "Suoritettu";
+            document.getElementById('image').src = "img/huoneistosaneeraja.jpg";
+        }
+        function logistiikka() {
+            let div = document.getElementById("study");
+            div.innerHTML = "Logistiikka-alan perusteissa ajoin C-kortin, sekä opin logistiikka-alan eri työmahdollisuuksista." + "<br><br>" + "Suoritettu";
+            document.getElementById('image').src = "img/logistiikka.jpg";
+        }
+        function tulostuskoulutus() {
+            let div = document.getElementById("study");
+            div.innerHTML = "3D-tulostus koulutuksessa kerrattiin koneenpiirrustuksen perusteita Autocad 2D:llä, sekä opiskeltiin muovitekniikkaa. Opiskelu painottui omien 3D-mallinnusten tekoon Inventor ohjelmalla, sekä 3D-tulostuksen toimintaan ja mahdollisuuksiin. Aiheesta lisää Projektit välilehdellä." + "<br><br>" + "Suoritettu";
+            document.getElementById('image').src = "img/tulostus.jpg";
+        }
+        function luonto() {
+            let div = document.getElementById("study");
+            div.innerHTML = "Luonto- ja ympäristöalan perustutkinnon osa-alueena suoritin luontoalan koulutusohjelman nimikkeellä luonto-ohjaaja Inarissa vuonna 2015. Tähän lukeutui eri luonto- ja kultturipalveluiden tuottamista asiakkaille, sekä ulkoreittien rakentamista ja hoitamista." + "<br><br>" + "120ov";
+            document.getElementById('image').src = "img/luontoala.jpg";
+        }
+        function puuveneala() {
+            let div = document.getElementById("study");
+            div.innerHTML = "Puuvenealan artesaanikoulutuksessa opittiin suunnittelemaan, rakentamaan, huoltamaan ja kunnossapitämään puuveneitä. Koulutusalan yhteydessä toimi lasikäsityöaloja, joita pääsi myös kokeilemaan. Suunnittelemani vene valitettavasti osoittaui liian haastavaksi lautojen taipumiselle, joten luovutin työn kollegalle. Veneestä valmistui lopuksi lasikuituinen versio." + "<br><br>" + "77ov";
+            document.getElementById('image').src = "img/puuveneala.jpg";
+        }
+        function veneala() {
+            let div = document.getElementById("study");
+            div.innerHTML = "Tekniikan ammattikorkeakoulututkinto koulutusohjelmana veneala ja tutkintonimenä insinööri on suoritettu Kotkassa 2008 Kymenlaakson ammattikorkeakoulussa. Koulutus painottui silloisessa nousussa olevaan Suomalaiseen huvivene tuotantoon. Materiaaleista eniten keskittymällä komposiitteihin. Koulutukseen kuului veneisiin liittyvää tekniikan, suunnittelun ja valmistuksen tuntemusta." + "<br><br>" + "240op";
+            document.getElementById('image').src = "img/veneala.PNG";
+        }
+        function automaatioasentaja() {
+            let div = document.getElementById("study");
+            div.innerHTML = "Automaatioasentajan perustutkinnon suoritin Raahessa 2002." + "<br><br>" + "120ov";
+            document.getElementById('image').src = "img/automaatioala.jpg";
+        }
+    </script>
+</body>
+
+</html>

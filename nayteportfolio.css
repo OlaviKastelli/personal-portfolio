@@ -1,0 +1,381 @@
+
+article, aside, figure, footer, header, main, nav, section  {
+    display: block; /*Näytetään Block tilassa, jolloin sisältö esiintyy omassa tilassaan.*/
+    }
+body {
+        font-family: Helvetica, sans-serif; /* Määritellään fontti*/
+        background-color: #fdfdfd; /* Taustavärinä valkoinen*/
+        width: 90%; /* Leveys on lukittu 90%, jolloin sivuille jää ilmaa*/
+        margin: auto; /* Keskittää marginin*/
+        min-width: 620px; /* Leveys lukittuu tähän, jolloin se ei pienene enää vaikka näytön resoluutio on pienempi*/
+    }
+    /* Header osiossa kerrotaan sivuston nimi*/
+header {
+        background-color: #fff;
+        margin:-20px 0px -20px 0px; /* Määritellään Margin, eli mihin alue asettuu reunoihin nähden*/
+        text-align: center; /* Keskitetään teksti*/
+    }
+nav {
+        background-color: #2c168d;
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+        padding: 5px; /* Lisätään alueen sisälle tilaa reunoihin nähden*/
+        border-collapse:separate; /* lisätään alueen ja reunoihin tilaa */
+        border-spacing: 10px; /* Määritellään lisättävä tilan leveys reunoihin nähden*/
+        border: 10px double #ffffff; /* Määritellään kaksois reunat, niiden väli ja väliin jäävän tilan väri*/
+        border-radius: 15px; /* Pyöristetään reunaa tietyllä pixeli määrällä*/
+    }
+main {
+        overflow: hidden; /* Pääalueen ylimenevä osuus katkaistaan*/
+        padding: 15px;       
+    }
+section {
+        font-family: 'Azeret Mono', monospace;
+        background-color: #fcfcfc;
+        margin-bottom: 20px;
+        border: 3px solid #2c168d;
+        border-radius: 15px;
+        font-size: 25px;
+    }
+/* Sektiot ja niiden sisällä olevat artikkelit käyttäytyvät eri tavoin, joten niille määritellään eri asetukset*/
+section.introduction {
+    text-align: center;
+    }
+article {
+        border: 3px solid #2c168d;
+        border-radius: 15px;
+        min-height: 50px; /* Artikkelilla on minimi korkeutena pikseli määrä, jottei se romahda viivaksi*/
+    }
+article.frontpage {
+    margin: 20px 300px 20px 20px;
+    width: 65%; /* Artikkeleille määritellään prosentuaalinen leveys, jottei ne kasva isäntä alueestaan yli*/
+    font-size: 15px;
+    }
+article.page {
+    margin: 20px;       
+    margin-right: 53%; /* Määritellään artikkeli sivun oikealle tittyyn kokoon*/       
+    }
+article.right {
+    margin-left: 20px;
+    width: 95%; /* Kavennetaan hieman kokoa*/
+    }      
+/* Navigointi osio on irrallinen pääosiosta ja on samanlainen joka sivulla, lukuunottamatta asetusta valikoidulle sivulle*/
+nav ul {
+    display:inline; /* Ylhäällä sijaitsevassa sivuvalikossa linkit ovat rinnakkain, jolloin block vaihdetaan inline*/
+    padding:3px 0px 10px 0px;
+    vertical-align: middle; /* Elementti sijoitetaan keskelle isäntäänsä*/
+    }
+nav ul li {
+    font-family: 'Azeret Mono', monospace;
+    display:inline; 
+    margin:0px 15px 0px 0px;
+    }
+article a {
+    display: list-item; /* Elementti käyttäytyy kuten olisi listassa*/
+    list-style-type: none;
+    font-size: 25px;
+    margin-left: 20px;
+    }
+article p {
+    font-size: 20px;
+    margin: auto;
+    margin: 5px 20px 10px 20px;
+    }
+p.right {
+    border: 3px solid #2c168d;
+    border-radius: 15px;
+    min-height: 50px;
+    margin: 20px;       
+    margin-right: 53%;
+    }
+/* Seuraavissa määritellään otsikoiden ominaisuuksia*/
+h1, h2, h3, h4 { 
+        font-family: 'Play', sans-serif;
+        color: #00497d;
+        letter-spacing: 1px; /* Määritellään otsikon kirjaimille väliksi 1px*/
+    }
+h1 {
+        font-size: 50px;
+    }
+h2 {
+        text-align: center;
+    }
+h3 {
+        margin-left: 20px;
+    }
+/*Seuraavissa a: kohdissa määritellään miten linkit käyttäytyy esim. hiiren ollessa niiden päällä*/
+ul li a {
+    color:rgb(255, 255, 255);
+}
+
+ul li a:link {
+    color: #fff;
+    text-decoration: none;
+    margin:auto;
+    }
+ul li a:hover {
+    color: #8093ff;
+}
+a.hyperlink {
+    font-size: 15px;
+    margin-left: 0px;
+    color: rgb(35, 46, 206);
+    }
+a.hyperlink:link, a.hyperlink:visited,a.hyperlink:hover{
+    margin:auto;
+    text-decoration: none;
+}
+article a:active, a:focus {
+    margin-left: 30px;
+    font-weight: bold;
+    }
+main a {
+    text-decoration: none;
+    color: #00137d;       
+    }
+main a:hover {
+    text-decoration: none;
+    color: #8093ff;        
+    }
+section img {
+    margin: 20px;
+    border: 3px solid rgb(26, 93, 133);
+    float: left;
+    }
+/* Seuraava asetus responsive vaihtuu responsiivisesti sivun kokoa vaihtaessa @media screen kohdassa*/
+img.responsive {
+    border-collapse:separate;
+    border-spacing: 20px;
+    border: 10px double #2c168d;
+    border-radius: 15px;
+    }
+aside {
+        position: relative; /* sijainti on relatiivinen, eikä siten riippuvainen isännästään*/
+        margin: 20px;
+    }
+aside.introduction {
+    margin: 20px;
+    }
+aside.frontpage {
+    margin: 20px 0px 0px 270px;
+    }
+aside.page {
+    margin-bottom: 20px;
+    width: 50%;
+    float: right; /* Tämä alue kelluu oikealla, eikä sijoitu aiempien osioiden alapuolelle*/
+    font-size: 18px;
+      }
+      aside.page1 {
+        margin-bottom: 20px;
+        width: 30%;
+        float: right;
+        font-size: 70%;
+        }
+em {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+    }    
+/* footer on erillinen osio vaihtuvasta pääalueesta. Siinä ilmaistaan asiaa, joka on oleellista joka sivulle, kuten tekijänoikudet*/ 
+footer {
+    text-align: center;
+    clear:both;
+    margin:0px 25px 0px 25px;
+    }
+article hr.clear {
+    clear: both; 
+    visibility:hidden; 
+    margin-bottom: -1px; 
+    height: 0px
+    }
+/* Tämä asetus puskee sectio osuuden reunoja alaspäin, jottei artikkelit valu niiden päälle*/
+section hr.clear {
+    clear: both; /* Elementti puskee vasemman ja oikean puolen alle*/
+    visibility:hidden; /* Elementti piiloitetaan*/
+    margin-bottom: -1px; 
+    height: 0px
+    }
+li.selected {
+    border-collapse:separate;
+    border-spacing: 2px;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    color:rgb(154, 206, 236)
+}
+/* Seuraavat kaksi ovat Google Mapsin omia asetuksia kartan sijainnin näyttämiseen. Näistä kokoa vaihdetaan responsiivisesti.*/
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 418px;
+    width: 418px;
+}
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 418px;
+    width: 418px;
+    padding: 5px;
+    margin:auto;
+}
+/*Seuraavissa osioissa vaihdetaan kuvien kokoa sivun kokoa muuttaessa, jotta saataisiin hyvä käyttökokemus eri resoluutioilla*/
+@media screen and (max-width: 1920px) and (min-width: 1720px) {
+    img.responsive {
+        width: 700px;
+    }
+}
+@media screen and (max-width: 1720px) and (min-width: 1600px) {
+    img.responsive {
+        width: 620px;
+    }
+    .mapouter {
+        height: 345px;
+        width: 345px;
+    }
+    .gmap_canvas {
+        height: 345px;
+        width: 345px;
+    }
+}
+@media screen and (max-width: 1600px) and (min-width: 1280px) {
+    img.responsive {
+        width: 510px;
+    }
+    .mapouter {
+        height: 305px;
+        width: 305px;
+    }
+    .gmap_canvas {
+        height: 305px;
+        width: 305px;
+    }
+}
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+    img.responsive {
+        width: 395px;
+    }
+    .mapouter {
+        height: 240px;
+        width: 240px;
+    }
+    .gmap_canvas {
+        height: 240px;
+        width: 240px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 740px) {
+  body {
+        width: 96%;
+    } 
+    section {
+        width: 100%;
+    }  
+    article p {
+        font-size: 15px;
+    }
+    a {
+        font-size: 15px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    img.responsive {
+        width: 290px;
+    }
+    .mapouter {
+        height: 180px;
+        width: 180px;
+    }
+    .gmap_canvas {
+        height: 180px;
+        width: 180px;
+    }
+}
+@media screen and (max-width: 740px) {
+    nav ul li {
+        margin: 0;
+        display: block;
+        margin-bottom: 4px;
+        background-color: #2c168d;
+        padding: 5px;
+    }
+    nav {
+        background-color: #ffffff;
+    }
+    section {
+        font-size: 18px;
+    }
+    article p {
+        font-size: 10px;
+    }
+    aside {
+        font-size: 15px;
+    } 
+    a {
+        font-size: 15px;
+    }
+    article a {
+        font-size: 15px;
+        }
+    a.hyperlink {
+        font-size: 10px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    img.responsive {
+        width: 250px;
+    }
+    .mapouter {
+        height: 157px;
+        width: 157px;
+    }
+    .gmap_canvas {
+        height: 157px;
+        width: 157px;
+    }
+}
+/* Koska mobiililaitteiden resoluutiot ovat kasvaneet myös isoiksi, niin niihin ei auta responsiivisuus resoluution mukaan.
+Tällöin niiden responsiivisuus on huomioitava muilla tavoin. Nämä kuitenkin poikkeavat paljon eri valmistajista ja malleista riippuen. 
+Seuraava asetus on testattu Samsung Galaxy A20e kännykällä toimivaksi.*/
+@media screen and (-webkit-device-pixel-ratio: 2) {
+    nav ul li {
+        margin: 0;
+        display: block;
+        margin-bottom: 4px;
+        background-color: #2c168d;
+        padding: 5px;
+    }
+    nav {
+        background-color: #ffffff;
+    }
+    section {
+        font-size: 18px;
+    }
+    article p {
+        font-size: 10px;
+    }
+    aside {
+        font-size: 15px;
+    } 
+    a {
+        font-size: 15px;
+    }
+    article a {
+        font-size: 15px;
+        }
+    a.hyperlink {
+        font-size: 10px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    img.responsive {
+        width: 250px;
+    }
+    .mapouter {
+        height: 157px;
+        width: 157px;
+    }
+    .gmap_canvas {
+        height: 157px;
+        width: 157px;
+    }
+}

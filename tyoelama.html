@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayteportfolio Tyoelama</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Play:wght@700&family=Yanone+Kaffeesatz:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="nayteportfolio.css">
+</head>
+
+<body>
+    <a id="alku"></a>
+    <header>
+        <h1>Näyteportfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="etusivu.html">Etusivu</a></li>
+            <li class="selected"><a href="tyoelama.html">Työelämä</a></li>
+            <li><a href="opinnot.html">Opinnot</a></li>
+            <li><a href="ict.html">ICT</a></li>
+            <li><a href="harrastukset.html">Harrastukset</a></li>
+            <li><a href="projektit.html">Projektit</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section class="introduction">
+            <h2>
+                Työelämä
+            </h2>
+            <p>
+                Työelämään lukeutuu useita eri alojen työpaikkoja.
+                Useimmin tähän ajaa uteliaisuus nähdä, kokea ja oppia uusia asioita.
+                Joskus olosuhteista johtuva työn tekemisen ilo.
+                Seuraavassa listassa on lueteltu pääpiirteittäin työaloja ja vuosilukuja.
+                Nämä sisältävät työ- ja harjoittelupaikkoja.
+            </p>
+        </section>
+        <section>
+            <a id="section"></a>
+            <aside class="page">
+                <article class="right">
+                    <p id="work">
+                        Napsautappa vasemmalta tumman sinistä tekstiä niin saat lisää tarinaa.
+                    </p>
+                </article>
+                <br>
+                <img id="image" class="responsive" src='img/tyoelama.jpg' alt='Nyt ei tullut kuvaa'>
+            </aside>
+            <article class="page">
+                <br>
+                <!-- Seuraavassa on lista mihin on lisätty linkkejä. Linkki suorittaa tietyn Javascript koodin.
+                Tällä mahdollistetaan, että sivun ei tarvitse latautua uudestaan ja että sivulla näytetään vain olennaista
+                tietoa aihealueesta. -->
+                <a href="Javascript: rakennusala();">Rakennusala</a>
+                <p>
+                    SOL henkilöstöpalvelut 2017-2021<br>
+                    Kotkan varamiespalvelu 2004-2007<br><br>
+                    Are Oy 2019<br>
+                </p>
+                <a href="Javascript: puuala();">Puuala</a>
+                <p>
+                    Transval Oy 2018-2019<br>
+                    Karhulan pakkaus Oy 2008<br><br>
+                    Veistovene Ky 2011<br>
+                </p>
+                <a href="Javascript: varastoala();">Varastoala</a>
+                <p>
+                    PKC Electronics 2010<br><br>
+                    Niemi palvelut Oy 2017<br>
+                </p>
+                <a href="Javascript: asiakaspalvelu();">Asiakaspalvelu</a>
+                <p>
+                    N-Clean 2015-2016<br>
+                    Kotkan puuvenekeskus 2005<br>
+                    Kotkan kulttuuriasiainkeskus 2005<br><br>
+                    Lapin luontolomat 2015<br>
+                    Metsähallitus 2014<br>
+                    Vasatokka 2014<br>
+                </p>
+                <a href="Javascript: kalustesuunnittelu();">Kaluste-suunnittelu</a>
+                <p>
+                    Muuratpuu Pohjonen Oy 2017<br>
+                </p>
+                <a href="Javascript: kiinteistöala();">Kiinteistöala</a>
+                <p>
+                    Kihniön kunta 2013<br>
+                </p>
+                <a href="Javascript: maatalous();">Maatalous</a>
+                <p>
+                    Useita eri työpaikkoja 2009-2010<br>
+                </p>
+                <a href="Javascript: teollisuus();">Teollisuus</a>
+                <p>
+                    Loviisan ydinvoimalaitos/Omega Building Oy/Ab 2006, 2007<br><br>
+                    Rautaruukki (SSAB) 2002<br>
+                </p>
+            </article>
+            <hr class="clear">
+        </section>
+        <a href="#section">[Tekstin alkuun]</a>
+        <a href="#alku">[Sivun alkuun]</a>
+    </main>
+    <footer>
+        <p><em>&copy; 2021 Olavi Kastelli. Kaikki oikeudet pidätetään.</em></p>
+    </footer>
+    <!-- Tähän osioon on lisätty yksinkertaiset Javascript koodit sivun käyttömukavuutta muokkaamaan. Siinä haetaan ensin
+    elementti sen Id arvolla ja muodostetaan sen sisälle kohdassa div.innerHTML tekstiä. -->
+    <script>
+        function rakennusala() {
+            let div = document.getElementById("work");
+            div.innerHTML = "Rakennusala on ollut pääsääntöinen työllistäjäni viime vuosina. Olen työskennellyt mm. maansiirto-, saneeraus-, raudoitus-, betoni-, kantamis- sekä siivoustehtävissä ja talopakettien pystytyksessä. Määräaikaiset työsuhteet ovat opettaneet pelkäämätöntä asennetta tarttua uusiin työtehtäviin sekä työaloihin. Opintoja alalle on huoneistosaneerajakurssi, jossa käytiin läpi kylpyhuoneen ja seinien pintojen korjausta käytännön harjotuksin.";
+        }
+        function puuala() {
+            let div = document.getElementById("work");
+            div.innerHTML = "Puualan palkkatöinä on ollut puutavara-pakkaustuotteitten tekeminen. Työ on vaatinut hyvää kuntoa. Työskennellessäni Transval Oy:llä työnkuva painoittui myös paljon trukin ajotaitoon, sekä rekkojen lastaukseen. "
+                + "Puuvenealan artesaanikoulutukseen sisältyi 6kk mittainen työharjoittelu puuveneverstaalla. Tämän suoritin Kotkassa yhden miehen verstaalla, jossa työtehtävät olivat monipuolisia. Työn kuvaan kuului niin korjausten suunnittelua, toteutusta, veneen laskua ja nostoa, sekä verstaan ylläpitoon kuuluvia tehtäviä. Harjoittelussa näki puuveneverstaan ylläpitämisen realiteetit, niin valmistuksesta kuin korjaamisestakin, jotta siitä saataisiin kannattavaa liiketoimintaa.";
+        }
+        function varastoala() {
+            let div = document.getElementById("work");
+            div.innerHTML = "Varastoalaan lukeutuu kesälomittajana työskentely  PKC Electronics:en Raahen toimipisteessä. Työ oli vastuullista, koska ajoittain olin yksin vastuussa varaston toimivuudesta vakituisten varastomiesten ollessa kesälomilla. Ohessa näin myös elektroniikkatehtaan toimivuutta ja sen alan työmahdollisuuksia. "
+                + "Niemi palvelut Oy:lle olen tehnyt muuttomies keikkoja. Suoritin myös siellä 1,5kk työharjoittelujakson osana logistiikka-alan perusteita vuonna 2017-2018. Harjoittelujakson aikana tutustuin sisätiloissa toimivan trukin käyttöön sekä varastotilojen optimointiin.";
+        }
+        function asiakaspalvelu() {
+            let div = document.getElementById("work");
+            div.innerHTML = "Asiakaspuolen tehtäviin lukeutuu mm. suksihuoltoa- ja vuokrausta, ohjelmapalvelua, kerrossiivousta, asiakaspäivystystä, sekä vierasvenesataman ylläpitoa. "
+                + "N-Cleanilla olin syys- talvi- sekä kesäsesongin 2015-2016 kerrossiivoojana sekä iltapäivystäjänä. Iltapäivystyksen työtehtäviin kuului asiakkaitten puheluihin vastaaminen, sekä niiden palveleminen, hotellin oman päivystysajan ulkopuolella. Sekä alueen yleinen huolto ja valvonta ravintolabaarin ulkopuolella yöaikaan. Työalueena oli Saariselän Tunturihotellien eri kiinteistöt. "
+                + "Vierasvenesataman pitämisen yhteydessä Kotkassa vuonna 2005 olin myös mukana järjestämässä puuvenemessuja. Luonto- ja ympäristöalan perustutkintoon kuuluvia harjoittelupaikkoja oli ohjelmapalveluyrityksinä Inarissa sijaitseva Vasatokka, sekä Saariselällä Lapin luontolomat. Metsähallituksella Sevettijärvellä työn kuvaan kuului lähinnä luontopalveluiden insfrastruktuurin kunnostusta.";
+        }
+        function kalustesuunnittelu() {
+            let div = document.getElementById("work");
+            div.innerHTML = "Kalustesuunnitteluun lukeutuu 3kk mittainen työharjoittelujakso Muuramessa vuonna 2017, joka sisältyi 3D-tulostus kurssiin. Tänä aikana sain oppia huonekalusuunnittelusta ja valmistuksesta, sekä käyttämään Autocad ohjelman 3D-mallinnus puolta.";
+        }
+        function kiinteistöala() {
+            let div = document.getElementById("work");
+            div.innerHTML = "Kiinteistöalalla toimin laitosmiehen kesälomittajana 2013 Kihniön kunnalle. Työssä oppi laajalti kunnossapito- ja huoltotehtäviä, sekä asiakaspalvelua. Kunnan vähäisestä asukasluvusta johtuen työalueeni oli laaja ja kattoi monipuolisesti eri tehtäviä.";
+        }
+        function maatalous() {
+            let div = document.getElementById("work");
+            div.innerHTML = "Maatalouden työpaikat painottuvat Uuteen-Seelantiin, jossa olin 11 kuukautta välillä 2009-2010 ”Working and holiday” työviisumilla. Tänä aikana työskentelin useille eri työnantajille eri hedelmätarhoilla, riippuen hedelmän sesongista. Työpaikkoihin lukeutui myös yksityisten ihmisten puutarhan hoitamista keikka luonteisesti.";
+        }
+        function teollisuus() {
+            let div = document.getElementById("work");
+            div.innerHTML = "Teollisuuden parissa olin vuosina 2006 ja 2007 toimiessani Loviisan ydinvoimalaitoksella haalausmiehenä. Meidän tehtävämme oli toimittaa osia muille urakoitsijoille ja joskus tämä vaati rakennusalan tuntemusta. Työssä oppi logistiikkaa- ja tehdasympäristön toimintatapoja. Raahen rautaruukilla (SSAB) vuonna 2002 suoritin automaatioalan tutkintoon kuuluvan 6kk työharjoittelujakson sähkömiesten apurina.";
+        }
+    </script>
+</body>
+
+</html>

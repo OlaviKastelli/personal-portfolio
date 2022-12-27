@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayteportfolio Harrastukset</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Play:wght@700&family=Yanone+Kaffeesatz:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="nayteportfolio.css">
+</head>
+
+<body>
+    <a id="alku"></a>
+    <header>
+        <h1>Näyteportfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="etusivu.html">Etusivu</a></li>
+            <li><a href="tyoelama.html">Työelämä</a></li>
+            <li><a href="opinnot.html">Opinnot</a></li>
+            <li><a href="ict.html">ICT</a></li>
+            <li class="selected"><a href="harrastukset.html">Harrastukset</a></li>
+            <li><a href="projektit.html">Projektit</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section class="introduction">
+            <h2>
+                Harrastukset
+            </h2>
+            <p>
+                Tietokone mahdollistaa useisiin luoviin projekteihin, joka osiltaan vie aikaa ruumilliselta liikunnalta.
+                Pyrin ulkoilemaan ja kuntoilemaan monipuolisesti näiden projektien ohella.
+                Harrastuksia tulee ja menee. Tässä osiossa on käsitelty elossa olevia harrastuksia.
+            </p>
+        </section>
+        <section>
+            <a id="section"></a>
+            <aside class="page">
+                <article class="right">
+                    <p id="harrastus">
+                        <br>
+                        Napsautappa vasemmalta tumman sinistä tekstiä niin saat lisää tarinaa.
+                    </p>
+                </article>
+                <br>
+                <img id="image" class="responsive" src='img/harrastukset.jpg' alt='Nyt ei tullut kuvaa'>
+            </aside>
+            <article class="page">
+                <br>
+                <a href="Javascript: vaeltaminen();">Vaeltaminen</a>
+                <p>
+                    Metsän keskellä syntynyt, joten olen vaeltanut luonnossa pienestä pitäen.<br>
+                </p>
+                <a href="Javascript: pyoraily();">Pyöräily</a>
+                <p>
+                    Viime vuosina kehittynyt matkustamiseksi, lyhyiden siirtymien lisäksi.<br>
+                </p>
+                <a href="Javascript: kendo();">Kendo</a>
+                <p>
+                    Vuonna 2021 löydetty uusi harrastus. Tällä hetkellä olen vielä miekan tiellä.<br>
+                </p>
+            </article>
+            <hr class="clear">
+        </section>
+        <a href="#section">[Tekstin alkuun]</a>
+        <a href="#alku">[Sivun alkuun]</a>
+    </main>
+    <footer>
+        <p><em>&copy; 2021 Olavi Kastelli. Kaikki oikeudet pidätetään.</em></p>
+    </footer>
+    <script>
+        function vaeltaminen() {
+            let div = document.getElementById("harrastus");
+            div.innerHTML = "Vaeltaminen alkoi kun rinkka ja teltta oli selässä ja luonto täynnä hienoja paikkoja, jonne oli polte päästä. Seuraavaksi lähdin hakemaan lisää tietoa ja taitoa Inariin kahdeksi vuodeksi. Vaeltaminen alkoi Uudessa Seelannissa 2009 ja sen jälkeen keskittyi opiskelun myötä Inarin lääniin, jossa vapaa-ajat kuluivat tuntureilla ja jokien äärellä.";
+            document.getElementById('image').src = "img/vaeltaminen.jpg";
+        }
+        function pyoraily() {
+            let div = document.getElementById("harrastus");
+            div.innerHTML = "Pyöräiltyä oli tullut lapsuudessa paljon, mutta ostettuani käytetyn uuden teknologian alumiinipyörän, huomasin kuinka kevyitä ne ovat nykyään polkea. Pyörä kulki aluksi työmatkat ja samaan aikaan alkoi jo suunnitelmat ”urbaanista” vaelluksesta rinkan tavarat siirrettynä tarakalle. Joten kun kevät tuli 2017 ja räntää vielä satoi helsinkiä myöten, pyörä ja minä lähdettiin laivalla Saksaan ja alkoi ensimmäinen pyörävaellukseni päämääränä länsieuroopan kautta koukaten mustalle merelle. Siihen matkaan tarvitsi vielä toisenkin kesän ja matka jäi lopulta Bukarestiin Romaniaan. Uusia reissuja on kuitenkin suunnitteilla. Välissä ajelen nyt kinttupolkuja maastopyörällä ja talvisin olen kunnostanut pyöriä.";
+            document.getElementById('image').src = "img/pyoraily.jpg";
+        }
+        function kendo() {
+            let div = document.getElementById("harrastus");
+            div.innerHTML = "Aina sillon tällöin on mukava lähteä kokeilemaan jotain uutta lajia ja sellaiseksi valikoitui nyt Kendo. Harrastus on vielä alkutekijöissään, mutta mielenkiintoa lajia kohtaan löytyy.";
+            document.getElementById('image').src = "img/kendo.jpg";
+        }
+    </script>
+</body>
+
+</html>
