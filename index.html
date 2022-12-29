@@ -1,13 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="fi">
+
 <head>
+    <!-- Head osiossa määritellään asetukset, jotka eivät näy käyttäjälle. Näitä on esimerkiksi tiedot merkkivalikoimaa (charset) käytetään
+     (utf-8 kattaa melkein kaikki merkit ja symbolit maailmassa). Head osiossa on myös linkit sivuston tarvitsemiin tiedsotoihin,
+     kuten fontti kirjastoihiin ja css tyylitiedostoon. Title on sivuston nimi, jota hyödynnetään esim. hakukoneissa. -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal portfolio</title>
+    <title>Nayteportfolio etusivu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Play:wght@700&family=Yanone+Kaffeesatz:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="nayteportfolio.css">
 </head>
+
 <body>
-    <h1>Tervetuloa Olavi Kastellin näyteportfolioon. Näyteportfolio avautuu seuraavasta linkistä.</h1>
-    <li><a href="personal-portfolio-files/tyoelama.html">Työelämä</a></li>
+    <a id="alku"></a>
+    <header>
+        <h1>Näyteportfolio</h1>
+    </header>
+    <!-- Navigointi osiossa navigoidaan sivuston sivujen välissä -->
+    <nav>
+        <ul>
+            <li class="selected"><a href="index.html">Etusivu</a></li>
+            <li><a href="tyoelama.html">Työelämä</a></li>
+            <li><a href="opinnot.html">Opinnot</a></li>
+            <li><a href="ict.html">ICT</a></li>
+            <li><a href="harrastukset.html">Harrastukset</a></li>
+            <li><a href="projektit.html">Projektit</a></li>
+        </ul>
+    </nav>
+    <!-- Pääosio vaihtuu sivuja navigoidessa -->
+    <main>
+        <!-- Sektiot ovat osioita, jotka voivat sisältää useita artikkeleita. -->
+        <section>
+            <img src='img/omakuva.png' alt='Omakuva'>
+            <aside class="introduction">
+                <p>
+                    Nimeni on Matti Olavi Kastelli, josta kutsumanimenä toimii Olavi.
+                    Olen syntynyt 1983 Raahen maaseudulle. Olen pohdiskeleva luonne, mutta asiaan ryhdyttyäni vien sen
+                    loppuun asti.
+                    Tapanani on tutkia ja tutustua uusiin asioihin ja tämä ajaa minua eteenpäin.
+                </p>
+            </aside>
+            <hr class="clear">
+        </section>
+        <section>
+            <aside class="page1">
+                <article class="right">
+                    <!-- Seuraavassa määritelty Google mapsin näyttäminen asuinalueesta. -->
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="600" height="500" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=jyv%C3%A4skyl%C3%A4&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                                href="https://123movies-org.net"></a><br>
+                            <a href="https://www.embedgooglemap.net">map embed code</a>
+                        </div>
+                    </div>
+                </article>
+            </aside>
+            <article class="frontpage">
+                <p>
+                    Asun Jyväskylässä.
+                </p>
+            </article>
+            <article class="frontpage">
+                <p>
+                    Tällä hetkellä teen osa-aikatöitä rakennuksilla, sekä kehitän omaa sivustoani ReactJS:llä.
+                </p>
+            </article>
+            <article class="frontpage">
+                <p>
+                    Tavoitteena työllistyä ICT alalle, sekä työtehtäviin, jotka sisältävät suunnittelua.
+                </p>
+            </article>
+            <article class="frontpage">
+                <p>
+                    <a class="hyperlink" href="https://www.linkedin.com/in/olavikastelli">Linkedin </a>
+                    <a class="hyperlink" href="https://github.com/OlaviKastelli">Github</a>
+                </p>
+            </article>
+            <hr class="clear">
+        </section>
+        <a href="#alku">[Sivun alkuun]</a>
+    </main>
+    <!-- Footer on osio, joka näytetään joka sivulla. Siinä on tietoa tekijästä. -->
+    <footer>
+        <p><em>&copy; 2021 Olavi Kastelli. Kaikki oikeudet pidätetään.</em></p>
+    </footer>
 </body>
+
 </html>
